@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algo Visualizer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 36 36" fill="none"><rect x="2" y="2" width="14" height="14" rx="3" fill="#6c63ff" opacity=".8"/><rect x="20" y="2" width="14" height="14" rx="3" fill="#f59e0b" opacity=".8"/><rect x="2" y="20" width="14" height="14" rx="3" fill="#22c55e" opacity=".8"/><rect x="20" y="20" width="14" height="14" rx="3" fill="#00d4aa" opacity=".8"/></svg>
+    <div><h1>D&amp;C Algorithm Visualizer</h1><span>Divide &bull; Conquer &bull; Combine</span></div>
+  </div>
+  <nav class="algo-tabs" id="algoTabs">
+    <button class="algo-tab active" data-algo="merge">Merge Sort</button>
+    <button class="algo-tab" data-algo="quick">Quick Sort</button>
+    <button class="algo-tab" data-algo="minmax">Min &amp; Max</button>
+    <button class="algo-tab" data-algo="maxsub">Max Subarray</button>
+    <button class="algo-tab" data-algo="strassen">Strassen's Multiply</button>
+    <button class="algo-tab" data-algo="closest">Closest Pair</button>
+    <button class="algo-tab" data-algo="convex">Convex Hull</button>
+  </nav>
+</header>
+
+<div class="main">
+  <div class="canvas-area">
+    <div class="controls" id="controlsBar">
+      <label>Input:</label>
+      <input type="text" id="inputData" value="38, 27, 43, 3, 9, 82, 10">
+      <button class="btn btn-secondary" id="btnRandom">🎲 Random</button>
+      <button class="btn btn-primary" id="btnStart">▶ Start</button>
+      <button class="btn btn-secondary" id="btnStep">⏭ Step</button>
+      <button class="btn btn-secondary" id="btnReset">↺ Reset</button>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+        <label>Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="10" value="5">
+        <span class="speed-label" id="speedLabel">5x</span>
+      </div>
+    </div>
+    <div class="step-indicator" id="stepIndicator">
+      <span class="step-badge divide" id="stepBadge">READY</span>
+      <span class="step-text" id="stepText">Configure input and press Start to begin visualization.</span>
+      <span class="step-counter" id="stepCounter">Step 0 / 0</span>
+    </div>
+    <div class="viz-container" id="vizContainer"></div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <!-- Filled dynamically -->
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
