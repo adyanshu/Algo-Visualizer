@@ -127,9 +127,3 @@ Each algorithm's sidebar shows:
 - **Master Theorem application** — which case applies and why
 - **Best / Average / Worst case** complexity
 - **Space complexity**
-
----
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
